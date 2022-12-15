@@ -13,9 +13,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         container[0].appendChild(list_container).append(list_num, list_title, list_writer, list_view, list_date);
         // list_container에 display: flex 넣어야 합니다!
     }
-    const insert = document.querySelector("button");
-
-    insert.addEventListener("click",refresh);
-
+    
+    
 
 })
