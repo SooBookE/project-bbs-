@@ -1,13 +1,13 @@
 
 class Article {
 
-    constructor( dnum, ttl, author, txt, vw) {
+    constructor( dnum, ttl, author, txt, vcnt ) {
     this.dnum = dnum //글번호
     this.ttl = ttl // 제독
     this.author = author
     this.txt = txt // 본문
     // this.day = day // 날짜
-    this.vw = vw
+    this.vcnt = vcnt
 
     }
 }
