@@ -19,12 +19,11 @@
         background-color: skyblue;
         color: white;
       }
-      table {
-        width: auto;
+      .titles {
+        display: inline-block;
         background-color: gray;
-      }
-      th {
         color: white;
+        width: auto;
       }
     </style>
   </head>
@@ -35,22 +34,20 @@
     </header>
     <aside></aside>
     <section>
-      <hr />
+      <hr/>
       <p>
         <button class="btnwrite">글쓰기</button>
       </p>
       <p>
-        <input class="search" type="text" value="검색어를 입력하세요" />
+        <input class="search" type="text" value="검색어를 입력하세요"/>
       </p>
-      <table>
-        <tr>
-          <th>글번호</th>
-          <th>제목</th>
-          <th>작성자</th>
-          <th>조회수</th>
-          <th>작성일자</th>
-        </tr>
-      </table>
+      <div>
+        <div class="titles">글번호</div>
+        <div class="titles">제목</div>
+        <div class="titles">작성자</div>
+        <div class="titles">조회수</div>
+        <div class="titles">작성일자</div>
+      </div>
       <div class="container">dtd</div>
     </section>
     <footer></footer>
