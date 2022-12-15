@@ -3,11 +3,11 @@ class Article {
 
     constructor( dnum, ttl, author, txt, vw) {
     this.dnum = dnum //글번호
-    this.ttl = ttl // 제독
-    this.author = author
+    this.ttl = ttl // 제목
+    this.author = author // 작성자
     this.txt = txt // 본문
     // this.day = day // 날짜
-    this.vw = vw
+    this.vw = vw // 조회수
 
     }
 }
