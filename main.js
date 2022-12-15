@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         const container = document.getElementsByClassName('container');
         
-        container.appendChild(list_container).apeend(list_num, list_title, list_writer, list_view, list_date);
+        container[0].appendChild(list_container).apeend(list_num, list_title, list_writer, list_view, list_date);
         // list_container에 display: flex 넣어야 합니다!
     }
     const insert = document.querySelector("button");
