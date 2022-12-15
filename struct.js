@@ -6,7 +6,7 @@ class Article {
     this.author = author // 작성자
     this.ttl = ttl // 제목
     this.txt = txt // 본문
-    // this.day = day // 날짜
+    this.day = day // 날짜
     this.vcnt = vcnt // 조회수
 
 

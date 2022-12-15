@@ -28,11 +28,13 @@
                 dcnt += 1
                 // console.log(dcnt)
 
-                // let day = new Date()
+                let today = new Date()
+                let day = today.getFullYear() + '.' + today.getMonth() + '.' + today.getDay() + '.' 
+
                 // console.log(day)
                 // console.log(typeof day)
 
-                let article = new Article( dcnt, title.value, author.value, text.value, refcount ) // day 추가예정
+                let article = new Article( dcnt, title.value, author.value, text.value, day, refcount ) // day 추가예정
 
                 console.log(article.ttl)
                 console.log(article.txt)
@@ -54,6 +56,8 @@
 <body>
     <h1>글작성</h1>
 
+
+    <div> <a href="./main.html"> 글목록으로 </a></div>
     <div>제목 </br>
         <input id="title" type="text" /></div>
 
