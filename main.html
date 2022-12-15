@@ -10,19 +10,47 @@
             
         })
     </script>
+    <style>
+        .btnwrite {
+            background-color: gray;
+            color : white;
+            border: none;
+        }
+        .btnwrite:hover{
+            background-color: skyblue;
+        }
+        .search {
+            background-color: skyblue;
+            color : white;
+        }
+        table{
+            width: 100%;
+            background-color: gray;
+        }
+        th{
+            color : white;
+        }
+    </style>
 </head>
 <body>
-    <h1>게시판</h1>
-    <button>글쓰기</button>
-    <br>
-    <input type="text" value="검색">
-    <br>
+    <header>
+        <h1>게시판</h1>
+    </header>
+    <hr>
+    <p>
+        <button class="btnwrite">글쓰기</button>
+    </p>
+    <p>
+    <input class="search" type="text" value="검색어를 입력하세요">
+    </p>
     <table>
-        <tr>글번호</tr>
-        <tr>제목</tr>
-        <tr>작성자</tr>
-        <tr>조회수</tr>
-        <tr>작성일자</tr>
+        <tr>
+            <th>글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>조회수</th>
+            <th>작성일자</th>
+        </tr>
     </table>
     <div class="container">dtd</div>
     <br>
