@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>글쓰기</title>
 
+    <title>글쓰기</title>
+    <script type = "text/javascript" src="./struct.js"></script>
     <script>
 
-        var dnum = 0;
-        var ttl = ""
-        var txt = ""
+        var dcnt = 0
 
         document.addEventListener( 'DOMContentLoaded', () => {
-            const title = document.querySelector('title')
-            const text = document.querySelector('text')
-            const submit = document.querySelector('submit')
+            const title = document.querySelector('#title')
+            const text = document.querySelector('#text')
+            const submit = document.querySelector('#submit')
 
 
             submit.addEventListener( 'click' , () => {
 
+                
+                // console.log(title.value)
+                // console.log(typeof title.value)
+                // console.log(text.value)
+                // console.log(typeof text.value)
+                dcnt += 1
+                // console.log(dcnt)
 
+                // let day = new Date()
+                // console.log(day)
+                // console.log(typeof day)
+
+                let article = new Article( dcnt, title.value, text.value ) // day 추가예정
+
+                console.log(article.ttl)
+                console.log(article.txt)
+
+                localStorage.setItem( dcnt , article ) // dnum 키값 문자열 or 숫자로
+                console.log( localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
             })
 
         })
@@ -30,8 +47,14 @@
 </head>
 <body>
     <h1>글작성</h1>
-    <div>제목 <input id="title" type="text"></div>
-    <div>내용 <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea></div>
-    <button id="save">저장</button> <button id="submit">작성완료</button>
+
+    <div>제목 </br>
+        <input id="title" type="text"></div>
+
+    <div>내용 </br>
+        <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <button id="save">저장</button> <button id="submit">작성완료</button> </br>
 </body>
 </html>
