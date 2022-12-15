@@ -13,6 +13,7 @@
 
         document.addEventListener( 'DOMContentLoaded', () => {
             const title = document.querySelector('#title')
+            const author = document.querySelector('#author')
             const text = document.querySelector('#text')
             const submit = document.querySelector('#submit')
 
@@ -31,16 +32,16 @@
                 // console.log(day)
                 // console.log(typeof day)
 
-                let article = new Article( dcnt, title.value, text.value ) // day 추가예정
+                let article = new Article( dcnt, title.value, author.value, text.value, refcount ) // day 추가예정
 
                 console.log(article.ttl)
                 console.log(article.txt)
 
-                localStorage.setItem( '${dcnt}' , article ) // dnum 키값 문자열 or 숫자로
+                localStorage.setItem( dcnt , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
                 
-                let val = localStorage.getItem( '${dcnt}' ) // 숫자로 해도 저장됨 키값은 게시물 숫자
+                let val = JSON.parse( window.localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
                 console.log(val)
-                let prt = val.txt.value
+                let prt = val.txt
                 console.log(prt)
 
             })
@@ -54,7 +55,10 @@
     <h1>글작성</h1>
 
     <div>제목 </br>
-        <input id="title" type="text"></div>
+        <input id="title" type="text" /></div>
+
+        <div>작성자 </br>
+            <input id="author" type="text" /></div>
 
     <div>내용 </br>
         <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea>
