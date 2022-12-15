@@ -20,10 +20,30 @@
         color: white;
       }
       .titles {
-        display: inline-block;
+        display: flex;
         background-color: gray;
         color: white;
         width: auto;
+      }
+      .dnum {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .ttl {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .author {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .vw {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .day {
+        padding-left: 20px;
+        padding-right: 20px;
       }
     </style>
   </head>
@@ -41,12 +61,12 @@
       <p>
         <input class="search" type="text" value="검색어를 입력하세요"/>
       </p>
-      <div>
-        <div class="titles">글번호</div>
-        <div class="titles">제목</div>
-        <div class="titles">작성자</div>
-        <div class="titles">조회수</div>
-        <div class="titles">작성일자</div>
+      <div class="titles">
+        <div class="dnum">글번호</div>
+        <div class="ttl">제목</div>
+        <div class="author">작성자</div>
+        <div class="vw">조회수</div>
+        <div class="day">작성일자</div>
       </div>
       <div class="container">dtd</div>
     </section>
