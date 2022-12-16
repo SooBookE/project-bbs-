@@ -9,8 +9,29 @@
     <script type = "text/javascript" src="./struct.js"></script>
     <script>
 
-        var dcnt = 0
-        var refcount = 0 // 글을 처음 작성했을때의 조회수이며 조회가 시작되면 view 에서 1씩 올려야 한다.
+        let dcnt = 0
+
+        if (window.localStorage.getItem( 'cur' ) == true) {
+            dcnt = JSON.parse( window.localStorage.getItem( 'cur' )) 
+            console.log(dcnt)
+        } else {
+
+            dcnt = 0 
+            console.log(dcnt)
+        }
+
+
+        
+        // 새로 부르면 값이 0으로 초기화되나 
+        // 다른 파일을 거치지 않고 write.html 에서만 계속 구동시키면
+        // 값이 정상적으로 증가하기 때문에 정상작동하는 것처럼 보인다.
+        // main 파일에서도 카운터가 지워진다.
+
+
+
+        var refcount = 0 
+        // 글을 처음 작성했을때의 조회수이며 조회가 시작되면 view 에서 1씩 올려야 한다.
+        // 조회수는 한번 작성하고 나면 수정파일에서만 불러오므로 초기화되지 않는다.
 
         document.addEventListener( 'DOMContentLoaded', () => {
             const title = document.querySelector('#title')
