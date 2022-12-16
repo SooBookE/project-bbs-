@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             }else{
                 localStorage.setItem('cur',cur);
             }
+            window.location.href = './watch.html';
         })
         /* cur 값을 setAttribute와 getAttirbute에서 dnum으로 대체했습니다. */
     }
