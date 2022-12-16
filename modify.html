@@ -21,7 +21,8 @@
         // 배열을 클래스로 처리
         let article = new Article( cdoc.dnum, cdoc.ttl, cdoc.author, cdoc.txt, cdoc.day, cdoc.vcnt )
 
-        console.log(article)
+        // console.log(article) // 정상출력
+        // console.log(article.ttl) // 정상출력
 
 
 
@@ -48,8 +49,10 @@
 
             err.textContent = "이전에 작성된 글을 수정합니다."
 
-            title.textContent = article.ttl // textcontent 로는 표시 안됨
-            author.textContent = article.author
+
+            // DOM을 읽어들인후 클래스나 객체의 값을 붙여넣는다. 
+            title.value.textContent = article.ttl // textcontent 로는 표시 안됨
+            author.value.textContent = article.author
             text.textContent = article.txt
 
             
@@ -101,18 +104,18 @@
 
 </head>
 <body>
-    <h1>글작성</h1>
+    <h1>글 수정하기</h1>
 
 
     <div> <a href="./main.html"> 글목록으로(저장하지 않음) </a></div>
     <div>제목 </br>
-        <input id="title" type="text" /></div>
+        <input id="title" type="text" required /></div>
 
         <div>작성자 </br>
-            <input id="author" type="text" /></div>
+            <input id="author" type="text" required /></div>
 
     <div>내용 </br>
-        <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea>
+        <textarea id="text" required ></textarea>
     </div>
 
     <div id = "err_msg" ></div>

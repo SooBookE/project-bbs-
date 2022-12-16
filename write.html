@@ -53,8 +53,10 @@
                 console.log(article.ttl)
                 console.log(article.txt)
 
+                localStorage.setItem( 'cur' , JSON.stringify( dcnt ) )
                 localStorage.setItem( dcnt , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
-                
+
+
                 // let val = JSON.parse( window.localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
                 // console.log(val)
                 // let prt = val.txt
