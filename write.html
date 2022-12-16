@@ -70,7 +70,7 @@
                 // 수정기능은 modify.html 에서 구현한다.
 
 
-                // window.location.href = './watch.html';
+                window.location.href = './watch.html';
 
                 } //end else 값의 입력이 정상적인 경우
 
@@ -87,13 +87,13 @@
 
     <div> <a href="./main.html"> 글목록으로(저장하지 않음) </a></div>
     <div>제목 </br>
-        <input id="title" type="text" /></div>
+        <input id="title" type="text" required /></div>
 
         <div>작성자 </br>
-            <input id="author" type="text" /></div>
+            <input id="author" type="text" required /></div>
 
     <div>내용 </br>
-        <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea>
+        <textarea id="text" required></textarea>
     </div>
 
     <div id = "err_msg" ></div>

@@ -51,13 +51,13 @@
 
 
             // DOM을 읽어들인후 클래스나 객체의 값을 붙여넣는다. 
-            title.value.textContent = article.ttl // textcontent 로는 표시 안됨
-            author.value.textContent = article.author
+            title.value = article.ttl // textcontent 로는 표시 안됨
+            author.value = article.author
             text.textContent = article.txt
 
             
-            console.log(article.ttl)
-            console.log(article.txt)
+            // console.log(article.ttl)
+            // console.log(article.txt)
 
 
             submit.addEventListener( 'click' , () => {
@@ -75,24 +75,15 @@
 
                 } else {
 
-                title.value
-                author.value
-                text.value
-
-
-
-
-                console.log(article)
                 
-                // console.log(typeof day)
+                let new_article = new Article( article.dnum, title.value, author.value, text.value, article.day, article.vcnt)
 
+                console.log(new_article) // 수정완료후 출력됨. 정상출력.
+                console.log(new_article.ttl, new_article.txt)
 
-                localStorage.setItem( cur_doc_num , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
+                localStorage.setItem( cur_doc_num , JSON.stringify( new_article ) ) // dnum 키값 문자열 or 숫자로
                 
-
-
-
-                // window.location.href = './watch.html';
+                window.location.href = './watch.html';
 
                 } //end else 값의 입력이 정상적인 경우
 
