@@ -1,7 +1,7 @@
 
 class Article {
 
-    constructor( dnum, ttl, author, txt, vcnt ) {
+    constructor( dnum, ttl, author, txt, day, vcnt ) {
     this.dnum = dnum //글번호
     this.author = author // 작성자
     this.ttl = ttl // 제목
