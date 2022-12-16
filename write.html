@@ -17,6 +17,9 @@
             const text = document.querySelector('#text')
             const submit = document.querySelector('#submit')
 
+            const err = document.querySelector('#err_msg')
+
+            err.textContent = "제목과 작성자 내용을 입력해 주세요."
 
             submit.addEventListener( 'click' , () => {
 
@@ -25,6 +28,16 @@
                 // console.log(typeof title.value)
                 // console.log(text.value)
                 // console.log(typeof text.value)
+
+                if( title.value == '' || author.value == '' || text.value == '' ) {
+
+                    // 오류 메시지 출력
+                    err.textContent = "제목과 작성자 본문은 필수적으로 입력해야 합니다."
+
+                } else {
+
+                
+
                 dcnt += 1
                 // console.log(dcnt)
 
@@ -54,7 +67,10 @@
                 // 
 
 
-                location.href= './watch.html';
+                window.location.href = './watch.html';
+
+                } //end else 값의 입력이 정상적인 경우
+
               }) // end submit
 
         }) // end DOM Content Loaded
@@ -76,6 +92,8 @@
     <div>내용 </br>
         <textarea id="text" name="내용" id="" cols="30" rows="10"></textarea>
     </div>
+
+    <div id = "err_msg" ></div>
 
     <button id="submit">작성완료</button> </br>
 </body>
