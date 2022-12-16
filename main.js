@@ -38,6 +38,41 @@ document.addEventListener("DOMContentLoaded",()=>{
         /* cur 값을 setAttribute와 getAttirbute에서 dnum으로 대체했습니다. */
     }
     
+
+
+
+    /* 테스트용 구문 */
+    class Article {
+
+        constructor( dnum, ttl, author, vcnt, day ) {
+        this.dnum = dnum //글번호
+        this.ttl = ttl // 제목
+        this.author = author // 작성자
+        this.vcnt = vcnt // 조회수
+        this.day = day // 날짜
+    
+        }
+    }
+    const ranArr = [];
+    const obj1 = new Article(1,'1번','ㄱㄱㄱ', 1212, '2022.12.15.18:23:08');
+    const obj2 = new Article(2,'2번','ㄴㄴㄴ', 2222, '2023.12.15.18:23:08');
+    const obj3 = new Article(3,'3번','ㄷㄷㄷ', 3232, '2024.12.15.18:23:08');
+    const obj4 = new Article(4,'4번','ㄹㄹㄹ', 4242, '2025.12.15.18:23:08');
+    const obj5 = new Article(5,'5번','ㅁㅁㅁ', 5252, '2026.12.15.18:23:08');
+    
+    ranArr.push(obj1);
+    ranArr.push(obj2);
+    ranArr.push(obj3);
+    ranArr.push(obj4);
+    ranArr.push(obj5);
+    
+    for(let i=1 ; i<=5 ; i++ ){
+        localStorage.setItem(i,JSON.stringify(ranArr[i-1]));
+    }
+    /* //테스트용 구문 */
+    
+
+
     if(localStorage.getItem('cur')){
         localStorage.removeItem('cur');
     }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
