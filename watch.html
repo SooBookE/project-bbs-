@@ -6,53 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>글읽기</title>
-    <script type = "text/javascript" src="./struct.js"></script>
+    <!-- <script type = "text/javascript" src="./struct.js"></script> -->
     <script>
 
-        var dkey = 0
+        // var dkey = 0
 
         document.addEventListener( 'DOMContentLoaded', () => {
             const title = document.querySelector('#title')
             const author = document.querySelector('#author')
             const text = document.querySelector('#text')
             const submit = document.querySelector('#submit')
-            const delete = document.querySelector('#delete')
+            const del = document.querySelector('#delete')
 
-
-            // 가져오기
-
-            // json 형식에서 변환해야 한다
-
-            let val = JSON.parse( window.localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
-            console.log(val)
-            let prt = val.txt
-            console.log(prt)
-
-
-
-            let article = new Article( dcnt, title.value, author.value, text.value, day, refcount )
-
-
-            delete.addEventListener( 'click' , () => {
-
-
-                // cur 키와 값을 지우고 
-                localStorage.removeItem()
-
-                localStorage.setItem( dcnt , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
-                
+            const val = window.localStorage.getItem( 'cur' );
+            console.log(val);
+            /* 키 cur에 해당하는 숫자 받아오기. */
+            const prt = JSON.parse(localStorage.getItem(val));
+            console.log(prt);
+            /* 받은 숫자를 기준으로 자료 불러오기. */
+            title.innerHTML = prt.ttl;
+            author.innerHTML = prt.author;
+            text.innerHTML = prt.day;
+            /* 받은 자료를 화면에 뿌려주기.(임시 자료들이에요!) */
 
 
 
-                // 임시저장 기능은 활성화하지 않음
-                // 미리보기 기능을 제공해야 한다. watch 파일과 같다.
-                // watch 파일에 수정기능을 선택하면 다시 넘어오도록 한다.
+            submit.addEventListener('click',()=>{
+                location.href='./modify.html';
+            }) // 클릭하면 스토리지 그대로 가지고 수정 페이지로 넘어가게 동작.
 
-                // 
-                // location.href= './main.html';
-              }) // end submit
+            del.addEventListener( 'click' , () => {
+                if(confirm('정말 삭제하시겠습니까?')){
+                    localStorage.removeItem('cur');
+                    localStorage.removeItem(val);                
+                    alert('삭제 됐습니다.');
+                    location.href = './main.html';
+                }
+              })
 
-        }) // end DOM Content Loaded
+        })
 
     </script>
 
@@ -71,7 +63,8 @@
     <div>내용 </br>
         <div id="text"></div>
     </div>
-
-    <button id="submit">확인</button> <button id="submit">삭제</button> </br>
+    <!-- submit은 cur 가지고 수정 페이지 넘어가기 -->
+    <button id="submit">글 수정</button> <button id="delete">글 삭제</button> </br>
+    <!-- del은 지우면서 목록으로 돌아가기+ confirm+ alert -->
 </body>
 </html>
