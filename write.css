@@ -1,0 +1,23 @@
+h1{
+    color:#2DB400;
+    background-color: white;
+}
+hr {
+    background-color: #2DB400;
+    height: 10px;
+}
+a {
+    color: #2DB400;
+    text-decoration: none;
+}
+div {
+    color: #2DB400;
+    font-weight: bold;
+}
+#submit {
+    background-color: #2DB400;
+    color: white;
+}
+#submit :hover{
+    font-weight: bold;
+}
