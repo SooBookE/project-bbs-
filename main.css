@@ -2,46 +2,74 @@
     background-color: gray;
     color: white;
     border: none;
-  }
-  .btnwrite:hover {
+}
+.btnwrite:hover {
     background-color: skyblue;
-  }
-  .search {
+}
+.search {
     background-color: skyblue;
     color: white;
-  }
-  .titles {
+}
+.titles {
     display: flex;
     color: white;
     text-align: center;
-  }
-  .dnum {
+}
+.color {
     background-color: gray;
+} 
+.dnum {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
-  }
-  .ttl {
-    background-color: gray;
+}
+.ttl {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
-  }
-  .author {
-    background-color: gray;
+}
+.author {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
-  }
-  .vcnt {
-    background-color: gray;
+}
+.vcnt {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
-  }
-  .day {
-    background-color: gray;
+}
+.day {
     padding-left: 20px;
     padding-right: 20px;
     width: 150px;
-  }
+}
+.container .dnum {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.container .ttl {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.container .author {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.container .vcnt {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50px;
+}
+.container .day {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 150px;
+}
