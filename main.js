@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         
         container[0].appendChild(list_container).append(list_dnum, list_ttl, list_author, list_vcnt, list_day);
         list_container.setAttribute("class",'titles');
-        list_container.setAttribute("key",dnum);
         list_dnum.setAttribute("class",'dnum');
         list_ttl.setAttribute("class",'ttl');
         list_author.setAttribute("class",'author');
@@ -26,8 +25,8 @@ document.addEventListener("DOMContentLoaded",()=>{
         list_vcnt.innerHTML=vcnt;
         list_day.innerHTML=day;
 
-        list_container.addEventListener("click",(e)=>{
-            const cur = e.currentTarget.getAttribute('key');
+        list_container.addEventListener("click",()=>{
+            const cur = dnum;
             if(localStorage.getItem('cur')){
                 localStorage.removeItem('cur');
                 localStorage.setItem('cur',cur);
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                 localStorage.setItem('cur',cur);
             }
         })
+        /* cur 값을 setAttribute와 getAttirbute에서 dnum으로 대체했습니다. */
     }
     
 
@@ -75,13 +75,14 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(localStorage.getItem('cur')){
         localStorage.removeItem('cur');
     }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
-    
+
     const keys = Object.keys(localStorage).sort((a,b)=>b-a);
     
     while(1){
-        keys.splice(keys.indexOf('cur'),1);
         if(keys.indexOf('cur')==-1){
             break;
+        }else{
+            keys.splice(keys.indexOf('cur'),1);
         }
     }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용.
     console.log(keys);
