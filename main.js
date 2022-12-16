@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
     const ranArr = [];
 
+    
     const obj1 = new Article(1,'1번','ㄱㄱㄱ', 1212, '2022.12.15.18:23:08');
     // const obj2 = new Article(2,'2번','ㄴㄴㄴ', 2222, '2023.12.15.18:23:08');
     // const obj3 = new Article(3,'3번','ㄷㄷㄷ', 3232, '2024.12.15.18:23:08');
