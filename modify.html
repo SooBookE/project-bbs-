@@ -9,8 +9,25 @@
     <script type = "text/javascript" src="./struct.js"></script>
     <script>
 
-        var dcnt = 0
-        var refcount = 0 // 글을 처음 작성했을때의 조회수이며 조회가 시작되면 view 에서 1씩 올려야 한다.
+        // 수정 기능에서는 dcnt, refcount, day 기능을 구현하지 않는다.
+        
+        let cur_doc_num = JSON.parse( window.localStorage.getItem( 'cur' )) // 숫자로 해도 저장됨 키값은 게시물 숫자
+        
+        console.
+                
+        
+        
+        
+                // console.log(val)
+                // let prt = val.txt
+                // console.log(prt)
+
+                // 임시저장 기능은 활성화하지 않음
+                // 미리보기 기능을 제공해야 한다. watch 파일과 같다.
+                // watch 파일에 수정기능을 선택하면 다시 넘어오도록 한다.
+
+                // 수정기능은 localstorage의 키값을 이용해서 받아와야 한다.
+                // 수정기능은 modify.html 에서 구현한다.
 
         document.addEventListener( 'DOMContentLoaded', () => {
             const title = document.querySelector('#title')
@@ -20,7 +37,7 @@
 
             const err = document.querySelector('#err_msg')
 
-            err.textContent = "제목과 작성자 내용을 입력해 주세요."
+            err.textContent = "이전에 작성된 글을 수정합니다."
 
             submit.addEventListener( 'click' , () => {
 
@@ -39,7 +56,7 @@
 
                 
 
-                dcnt += 1 // 임의적으로 새로운 키를 부여한다
+                dcnt += 1
                 // console.log(dcnt)
 
                 let today = new Date()
@@ -55,20 +72,10 @@
 
                 localStorage.setItem( dcnt , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
                 
-                // let val = JSON.parse( window.localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
-                // console.log(val)
-                // let prt = val.txt
-                // console.log(prt)
-
-                // 임시저장 기능은 활성화하지 않음
-                // 미리보기 기능을 제공해야 한다. watch 파일과 같다.
-                // watch 파일에 수정기능을 선택하면 다시 넘어오도록 한다.
-
-                // 수정기능은 localstorage의 키값을 이용해서 받아와야 한다.
-                // 수정기능은 modify.html 에서 구현한다.
 
 
-                // window.location.href = './watch.html';
+
+                window.location.href = './watch.html';
 
                 } //end else 값의 입력이 정상적인 경우
 
@@ -96,6 +103,6 @@
 
     <div id = "err_msg" ></div>
 
-    <button id="submit">작성완료</button> </br>
+    <button id="submit">수정완료</button> </br>
 </body>
 </html>
