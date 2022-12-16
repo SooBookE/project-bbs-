@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         })
         /* cur 값을 setAttribute와 getAttirbute에서 dnum으로 대체했습니다. */
     }
+    
     if(localStorage.getItem('cur')){
         localStorage.removeItem('cur');
     }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
