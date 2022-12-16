@@ -39,8 +39,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     }
 
     
-
-
     if(localStorage.getItem('cur')){
         localStorage.removeItem('cur');
     }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
