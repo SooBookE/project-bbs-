@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded",()=>{
         list_author.innerHTML=author;
         list_vcnt.innerHTML=vcnt;
         list_day.innerHTML=day;
+
+        list_container.addEventListener("click",(e)=>{
+            const cur = e.currentTarget.getAttribute('key');
+            if(localStorage.getItem('cur')){
+                localStorage.removeItem('cur');
+                localStorage.setItem('cur',cur);
+            }else{
+                localStorage.setItem('cur',cur);
+            }
+        })
     }
     
 
@@ -61,9 +71,19 @@ document.addEventListener("DOMContentLoaded",()=>{
     /* //테스트용 구문 */
     
 
+
+    if(localStorage.getItem('cur')){
+        localStorage.removeItem('cur');
+    }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
     
     const keys = Object.keys(localStorage).sort((a,b)=>b-a);
     
+    while(1){
+        keys.splice(keys.indexOf('cur'),1);
+        if(keys.indexOf('cur')==-1){
+            break;
+        }
+    }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용.
     console.log(keys);
     
     if(keys){
