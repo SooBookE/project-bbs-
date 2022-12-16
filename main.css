@@ -1,14 +1,27 @@
+h1{
+    color:#2DB400;
+    background-color: white;
+}
+hr {
+    background-color: #2DB400;
+    height: 10px;
+}
 .btnwrite {
-    background-color: gray;
-    color: white;
+    color : white;
+    background-color: #2DB400;
     border: none;
 }
-.btnwrite:hover {
-    background-color: skyblue;
+a {
+    color: white;
+    text-decoration: none;
+}
+.btnwrite :hover {
+    font-weight: bold;
 }
 .search {
-    background-color: skyblue;
-    color: white;
+    border: #2DB400 solid 5px;
+    color: #2DB400;
+    font-size: 30px;
 }
 .titles {
     display: flex;
@@ -17,16 +30,16 @@
 }
 .titles2 {
     display: flex;
-    color: white;
+    color: black;
     text-align: center;
 }
 .titles2:hover {
     opacity: 100%;
     color: rgb(4, 252, 4);
+    font-weight: bold;
 }
-
 .color {
-    background-color: gray;
+    background-color: #2DB400;
 } 
 .dnum {
     padding-left: 20px;
@@ -54,12 +67,10 @@
     width: 150px;
 }
 .container .dnum,.container .ttl,.container .author,.container .vcnt {
-    background-color: black;
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
 }
 .container .day {
-    background-color: black;
     width: 150px;
 }
