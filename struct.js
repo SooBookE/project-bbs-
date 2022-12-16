@@ -14,7 +14,7 @@ class Article {
     }
 }
 
-var refcount = 0
+
 
 
 
