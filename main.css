@@ -15,6 +15,16 @@
     color: white;
     text-align: center;
 }
+.titles2 {
+    display: flex;
+    color: white;
+    text-align: center;
+}
+.titles2:hover {
+    opacity: 100%;
+    color: rgb(4, 252, 4);
+}
+
 .color {
     background-color: gray;
 } 
@@ -43,28 +53,7 @@
     padding-right: 20px;
     width: 150px;
 }
-.container .dnum {
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 50px;
-}
-.container .titles :hover {
-    background-color: aqua;
-}
-.container .ttl {
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 50px;
-}
-.container .author {
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 50px;
-}
-.container .vcnt {
+.container .dnum,.container .ttl,.container .author,.container .vcnt {
     background-color: black;
     padding-left: 20px;
     padding-right: 20px;
@@ -72,7 +61,5 @@
 }
 .container .day {
     background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
     width: 150px;
 }

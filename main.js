@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         const container = document.getElementsByClassName('container');
         
         container[0].appendChild(list_container).append(list_dnum, list_ttl, list_author, list_vcnt, list_day);
-        list_container.setAttribute("class",'titles');
+        list_container.setAttribute("class",'titles2');
         list_dnum.setAttribute("class",'dnum');
         list_ttl.setAttribute("class",'ttl');
         list_author.setAttribute("class",'author');
