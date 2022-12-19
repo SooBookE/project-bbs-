@@ -1,25 +1,16 @@
-h1{
-    color:#2DB400;
-    background-color: white;
+h1 {
+    color : #2DB400;
 }
 hr {
     background-color: #2DB400;
     height: 10px;
 }
 a {
-    color: #2DB400;
+    color : #2DB400;
     text-decoration: none;
 }
 div {
-    color: #2DB400;
-    font-weight: bold;
-}
-#submit {
-    background-color: #2DB400;
-    color: white;
-    border: none;
-}
-#submit :hover{
+    color : #2DB400;
     font-weight: bold;
 }
 input {
@@ -30,4 +21,9 @@ textarea {
     width: 500px;
     height: 150px;
     resize: none;
+}
+#modify {
+    color : white;
+    background-color: #2DB400;
+    border: none;
 }
