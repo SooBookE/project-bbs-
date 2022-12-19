@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>글쓰기</title>
+    <title>글 수정하기</title>
     <script type = "text/javascript" src="./struct.js"></script>
+    <link rel="stylesheet" href="./modify.css">
     <script>
 
         // 수정 기능에서는 dcnt, refcount, day 기능을 구현하지 않는다.
@@ -97,8 +98,7 @@
 <body>
     <h1>글 수정하기</h1>
     <hr>
-
-    <div> <a href="./main.html"> 글목록으로(저장하지 않음) </a></div>
+    <p><a href="./main.html"> 글목록으로(저장하지 않음) </a></p>
     <div>제목 </br>
         <input id="title" type="text" required /></div>
 
@@ -110,7 +110,7 @@
     </div>
 
     <div id = "err_msg" ></div>
-
+    <br>
     <button id="modify">수정완료</button> </br>
 </body>
 </html>
