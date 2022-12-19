@@ -49,16 +49,6 @@ a {
     padding-right: 20px;
     width: 50px;
 }
-.ttl {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 50px;
-}
-.author {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 50px;
-}
 .vcnt {
     padding-left: 20px;
     padding-right: 20px;
@@ -69,18 +59,21 @@ a {
     padding-right: 20px;
     width: 150px;
 }
-.container .dnum,.container .vcnt {
+/* .container .dnum,.container .vcnt {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
-}
+} */
 /* .container .day {
     width: 150px;
 } */
-.ttl, .author{
+.ttl,.author{
+    padding-left: 20px;
+    padding-right: 20px;
     width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 /* .ttl, .author {
     width: 150px;   
