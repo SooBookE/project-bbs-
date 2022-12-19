@@ -22,13 +22,15 @@ a {
 }
 .title,.author,.vcnt,.text{
     color: #2DB400;
+    font-weight: bold;
 }
 #title,#author,#vcnt{
-    border: #2DB400 solid 5px;
+    border-bottom: #2DB400 solid 5px;
     width: 183px;
     height: 27px;
     padding: 0;
     color: black;
+    font-weight: normal;
 }
 #text{
     border: #2DB400 solid 5px;
@@ -38,4 +40,5 @@ a {
     color: black;
     overflow-wrap: break-word;
     overflow-y: auto;
+    font-weight: normal;
 }
