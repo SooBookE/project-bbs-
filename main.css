@@ -66,11 +66,16 @@ a {
     padding-right: 20px;
     width: 150px;
 }
-.container .dnum,.container .ttl,.container .author,.container .vcnt {
+.container .dnum,.container .vcnt {
     padding-left: 20px;
     padding-right: 20px;
     width: 50px;
 }
-.container .day {
+/* .container .day {
     width: 150px;
+} */
+.ttl, .author{
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
