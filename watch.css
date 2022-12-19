@@ -25,12 +25,13 @@ a {
     font-weight: bold;
 }
 #title,#author,#vcnt{
-    border-bottom: #2DB400 solid 5px;
+    border-bottom: #2DB400 solid 1px;
     width: 183px;
     height: 27px;
     padding: 0;
     color: black;
     font-weight: normal;
+    display: inline;
 }
 #text{
     border: #2DB400 solid 5px;
@@ -41,4 +42,11 @@ a {
     overflow-wrap: break-word;
     overflow-y: auto;
     font-weight: normal;
+}
+#title {
+    font-size: 50px;
+    font-weight: bold;
+}
+.vcnt {
+    margin-left: 15px;
 }
