@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded",()=>{
       //  localStorage.removeItem('cur');
     }// 초기 로드 시 cur라는 키가 있다면 제거하고 시작.
 
-    const keys = Object.keys(localStorage).sort((a,b)=>b-a);
+    const keys = Object.keys(localStorage);
     
     while(1){
         if(keys.indexOf('cur')==-1){
@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             keys.splice(keys.indexOf('acc'),1);
         }
     }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용2.
+    keys.sort((a,b)=>b-a);// 정렬을 마지막으로 변경.
     console.log(keys);
     
     if(keys){
