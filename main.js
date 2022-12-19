@@ -51,7 +51,14 @@ document.addEventListener("DOMContentLoaded",()=>{
         }else{
             keys.splice(keys.indexOf('cur'),1);
         }
-    }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용.
+    }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용1.
+    while(1){
+        if(keys.indexOf('acc')==-1){
+            break;
+        }else{
+            keys.splice(keys.indexOf('acc'),1);
+        }
+    }// 배열에서 글 목록 내용만 뽑아내기 위해 반복문 사용2.
     console.log(keys);
     
     if(keys){
