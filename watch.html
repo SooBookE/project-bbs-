@@ -21,7 +21,7 @@
             const prt = JSON.parse(localStorage.getItem(val));
             /* 받은 숫자를 기준으로 자료 불러오기. */
             console.log(prt);
-            prt.vcnt++;// vcnt 1 증가.
+            prt.vcnt +=1 ;// vcnt 1 증가.
 
             title.innerHTML = prt.ttl;
             author.innerHTML = prt.author;
