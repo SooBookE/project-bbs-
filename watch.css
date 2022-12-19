@@ -43,6 +43,7 @@ a {
     overflow-wrap: break-word;
     overflow-y: auto;
     font-weight: normal;
+    white-space: pre-wrap;
 }
 #title {
     font-size: 50px;
