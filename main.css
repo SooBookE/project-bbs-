@@ -1,3 +1,4 @@
+body {font-family: 'Poor Story', cursive;}
 h1{
     color:#2DB400;
     background-color: white;
@@ -74,3 +75,6 @@ a {
 .container .day {
     width: 150px;
 }
+/* .ttl, .author {
+    width: 150px;   
+} */
