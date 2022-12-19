@@ -12,17 +12,17 @@
 
         let accumulator = 0
 
-        let dcnt = JSON.parse( window.localStorage.getItem( 'acc' )) 
-        if (dcnt === null ) {
+        let dcnt = JSON.parse( window.localStorage.getItem( 'acc' ))
+        console.log("dcnt 1 : ", dcnt)
+
+        if ( dcnt === null ) {
 
             dcnt = 0
-            console.log(dcnt)
-        } 
-        
-        // else {
-        //     accumulator = dcnt
-        //     console.log(accumulator)
-        // }
+            console.log("dcnt 2 : ", dcnt)
+        } else {
+            accumulator = dcnt
+            console.log(accumulator)
+        }
 
 
 
@@ -65,8 +65,13 @@
 
                 
 
-                accumulator += 1 // 글번호를 1 증가시킨다.
+                accumulator += 1
+                // 글번호를 1 증가시킨다.
                 console.log(accumulator)
+
+                // 누산기와 글번호가 따로 움직이므로 두번째 글이 처음글을 덮어쓰는 문제가 있다.
+
+
 
                 let today = new Date()
                 let day = today.getFullYear() + '.' + today.getMonth() + '.' + today.getDay() + '.' 
@@ -80,6 +85,7 @@
                 // console.log(article.txt)
 
                 localStorage.setItem( 'acc' , JSON.stringify( accumulator ) )
+                localStorage.setItem( 'cur' , JSON.stringify( accumulator ) )
                 localStorage.setItem( accumulator , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
                 // accumulator 대신 dcnt 로 올렸는지 확인 dcnt 는 누산되지 않음
 
