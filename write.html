@@ -16,10 +16,11 @@
         console.log("dcnt 1 : ", dcnt)
 
         if ( dcnt === null ) {
-
+            // dcnt 저장된게 없다면 dcnt를 0으로 초기화하고 누산기 accumulator의 값만 사용한다.
             dcnt = 0
             console.log("dcnt 2 : ", dcnt)
-        } else {
+        } else { 
+            // 글번호 저장된게 있다면 accumulator 에서 가져와야 한다.
             accumulator = dcnt
             console.log(accumulator)
         }
