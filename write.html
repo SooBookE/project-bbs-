@@ -10,16 +10,20 @@
     <script type = "text/javascript" src="./struct.js"></script>
     <script>
 
-        let dcnt = 0
+        let accumulator = 0
 
-        if (window.localStorage.getItem( 'acc' ) == true) {
-            dcnt = JSON.parse( window.localStorage.getItem( 'acc' )) 
-            console.log(dcnt)
-        } else {
+        let dcnt = JSON.parse( window.localStorage.getItem( 'acc' )) 
+        if (dcnt === null ) {
 
-            dcnt = 0 
+            dcnt = 0
             console.log(dcnt)
-        }
+        } 
+        
+        // else {
+        //     accumulator = dcnt
+        //     console.log(accumulator)
+        // }
+
 
 
         
@@ -61,8 +65,8 @@
 
                 
 
-                dcnt += 1 // 임의적으로 새로운 키를 부여한다
-                // console.log(dcnt)
+                accumulator += 1 // 글번호를 1 증가시킨다.
+                console.log(accumulator)
 
                 let today = new Date()
                 let day = today.getFullYear() + '.' + today.getMonth() + '.' + today.getDay() + '.' 
@@ -70,14 +74,14 @@
                 // console.log(day)
                 // console.log(typeof day)
 
-                let article = new Article( dcnt, title.value, author.value, text.value, day, refcount ) // day 추가예정
+                let article = new Article( accumulator, title.value, author.value, text.value, day, refcount ) // day 추가예정
 
-                console.log(article.ttl)
-                console.log(article.txt)
+                // console.log(article.ttl)
+                // console.log(article.txt)
 
-                localStorage.setItem( 'acc' , JSON.stringify( dcnt ) )
-                localStorage.setItem( dcnt , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
-
+                localStorage.setItem( 'acc' , JSON.stringify( accumulator ) )
+                localStorage.setItem( accumulator , JSON.stringify( article ) ) // dnum 키값 문자열 or 숫자로
+                // accumulator 대신 dcnt 로 올렸는지 확인 dcnt 는 누산되지 않음
 
                 // let val = JSON.parse( window.localStorage.getItem( dcnt )) // 숫자로 해도 저장됨 키값은 게시물 숫자
                 // console.log(val)
@@ -92,7 +96,7 @@
                 // 수정기능은 modify.html 에서 구현한다.
 
 
-                window.location.href = './watch.html';
+                // window.location.href = './watch.html';
 
                 } //end else 값의 입력이 정상적인 경우
 
@@ -107,7 +111,7 @@
     <h1>글작성</h1>
     <hr>
 
-    <div> <a href="./main.html"> 글목록으로(저장하지 않음) </a></div>
+     <p><a href="./main.html"> 글목록으로(저장하지 않음) </a></p>
     <div>제목 </br>
         <input id="title" type="text" required /></div>
 
@@ -119,7 +123,7 @@
     </div>
 
     <div id = "err_msg" ></div>
-
+    <br>
     <button id="submit">작성완료</button> </br>
 </body>
 </html>
